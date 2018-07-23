@@ -325,15 +325,18 @@ nav h1 a {
 
 /* ====== viewport <600 px=======*/
 @media screen and (max-width: 600px) {
+  #map {
+    height: 200px;
+  }
+  
   .inside #map-container {
     background: #363636 none repeat scroll 0 0;
-    height: 300px;
-    position: fixed;
+    height: 200px;
+    position: relative;
     right: 0;
-    top: 106px;
+    top: 105px;
     width: 100%;
-    z-index: 100;
-    padding-bottom: 5px;
+    z-index: 1;
   }
   #breadcrumb {
     padding: 0 40px;
@@ -346,7 +349,7 @@ nav h1 a {
   #restaurant-container {
     border-bottom: 1px solid #d9d9d9;
     border-top: 1px solid #fff;
-    padding: 410px 30px 30px;
+    padding: 110px 30px 30px;
     width: 100%;
   }
   #reviews-container {
