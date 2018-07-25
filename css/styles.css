@@ -1,13 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-* {
-  /*border: 1px solid red;*/
-  box-sizing: border-box;
-}
-
-*:focus {
-  border: 2px solid red;
-}
 
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
@@ -81,7 +73,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: calc(50%);
 }
 
 /* Display list items side by side */
@@ -297,7 +289,16 @@ nav h1 a {
   color: #666;
 }
 
-/*================ my addition ====================*/
+/*================ my additions ====================*/
+* {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+}
+
+*:focus {
+  border: 2px solid red;
+}
+
 .review-div {
   display: flex;
   flex-wrap: wrap;
@@ -321,13 +322,8 @@ nav h1 a {
 #reviews-list li {
   width: 100%;
 }
-/* Hide visibility not to focus this elements*/
-.mapboxg1-canvas .mapboxgl-ctrl-logo .mapbox-improve-map {
-  display: none;
-}
 
-
-/* ====== viewport <600 px=======*/
+/* ====== viewport <600 px =======*/
 @media screen and (max-width: 600px) {
   #map {
     height: 200px;
@@ -363,8 +359,8 @@ nav h1 a {
   }
   .inside #footer {
     width: 100%;
-}
-#footer {
-  padding: 5px;
-}
+  }
+  #footer {
+    padding: 5px;
+  }
 }

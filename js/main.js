@@ -179,7 +179,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  more.setAttribute('aria-label', DBHelper.imageAltForRestaurant(restaurant));
+  more.setAttribute('aria-label', DBHelper.imageAltForRestaurant(restaurant)); //add name of restaurant to link for screenreaders
   li.append(more)
 
   return li
@@ -211,3 +211,14 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+/**
+ * ======== ServiceWorker registration ===============
+ */
+
+ if(navigator.serviceWorker) {
+   navigator.serviceWorker.register('/sw.js').then(function() {
+     console.log('SW registration successfully DONE! :)');
+   }).catch(function() {
+    console.log('SW registration FAILED :(');
+   }
+   )}
