@@ -14,14 +14,14 @@
 
 <body class="inside">
   <!-- Beginning header -->
-  <header>
+  <header tabindex="-1">
     <!-- Beginning nav -->
-    <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+    <nav tabindex="-1">
+      <h1><a href="/"  tabindex="-1">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
     <ul id="breadcrumb" >
-      <li><a href="/">Home</a></li>
+      <li><a tabindex="1" href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
     <!-- End nav -->
@@ -37,15 +37,15 @@
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
+      <h1 id="restaurant-name" tabindex="1"></h1>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
-      <p id="restaurant-address"></p>
-      <table id="restaurant-hours"></table>
+      <p id="restaurant-address"  tabindex="1" aria-label="Address"></p>
+      <table id="restaurant-hours" tabindex="1" aria-label="Opening hours"></table>
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section id="reviews-container">
+    <section id="reviews-container" tabindex="1">
       <ul id="reviews-list"></ul>
     </section>
     <!-- End reviews -->
