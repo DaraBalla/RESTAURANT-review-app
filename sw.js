@@ -1,6 +1,7 @@
 self.addEventListener('install', function(event) {
     event.waitUntil(caches.open('Rest-review-v1').then(function(cache) {
         return cache.addAll([
+            '/',
             '/index.html',
             '/css/styles.css',
             '/data/restaurants.json',
@@ -17,20 +18,28 @@ self.addEventListener('install', function(event) {
             '/js/dbhelper.js',
             '/js/main.js',
             '/js/restaurant_info.js',
-        ])
-    }))
-})
+        ]);
+    }));
+});
 
 
 
 self.addEventListener('fetch', function(event) {
     event.respondWith(caches.match(event.request).then(function(response) {
         if(response) {
-            return response}
+            return response
+        };
         return fetch(event.request)
-    }))
-})
+    }));
+});
+
 
 self.addEventListener('activate', function(event) {
-    event.waitUntil(caches.delete('Rest-review-v1'));
-})
+    event.waitUntil(caches.keys().then(function(cacheNames) {
+        return Promise.all(cacheNames.filter(function(cacheName) {
+            return cacheName.startsWith('Rest-') && cacheName != 'Rest-review-v1';
+        }).map(function(cacheName) {
+            return caches.delete(cacheName);
+        }));
+    }));
+});
