@@ -14,13 +14,13 @@
 
 <body class="inside">
   <!-- Beginning header -->
-  <header tabindex="-1">
+  <header>
     <!-- Beginning nav -->
-    <nav tabindex="-1">
-      <h1><a href="/"  tabindex="-1">Restaurant Reviews</a></h1>
+    <nav>
+      <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
+    <ul id="breadcrumb" aria-label="subpage position" role="navigation">
       <li><a tabindex="1" href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
@@ -29,31 +29,31 @@
   <!-- End header -->
 
   <!-- Beginning main -->
-  <main id="maincontent">
+  <main id="maincontent" role="main">
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" aria-label="google-map" role="application"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
-    <section id="restaurant-container">
-      <h1 id="restaurant-name" tabindex="1"></h1>
+    <section id="restaurant-container" aria-label="restaurant-info">
+      <h1 id="restaurant-name" tabindex="1" aria-label="restaurant-name"></h1>
       <img id="restaurant-img">
-      <p id="restaurant-cuisine"></p>
+      <p id="restaurant-cuisine" aria-label="restaurant-cuisine"></p>
       <p id="restaurant-address"  tabindex="1" aria-label="Address"></p>
       <table id="restaurant-hours" tabindex="1" aria-label="Opening hours"></table>
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
     <section id="reviews-container" tabindex="1">
-      <ul id="reviews-list"></ul>
+      <ul id="reviews-list" role="list" aria-label="reviews-list"></ul>
     </section>
     <!-- End reviews -->
   </main>
   <!-- End main -->
 
   <!-- Beginning footer -->
-  <footer id="footer">
+  <footer id="footer" tabindex="1" role="contentinfo" aria-label="footer">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
   <!-- End footer -->
